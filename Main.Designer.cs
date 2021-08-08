@@ -1,7 +1,7 @@
 ﻿
 namespace BankPractice_v1_
 {
-    partial class Form1
+    partial class Main
     {
         /// <summary>
         /// Required designer variable.
@@ -35,7 +35,7 @@ namespace BankPractice_v1_
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1155, 508);
+            this.ClientSize = new System.Drawing.Size(838, 570);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
