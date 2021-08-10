@@ -8,12 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BankPractice_v1_.Model;
+using System.Data.SqlClient;
 
 namespace BankPractice_v1_
 {
     public partial class Register : Form
     {
-        public User user1 = new User();
+        private SqlConnection conn;
+        private User user1 = new User();
         public Register()
         {
             InitializeComponent();
@@ -38,6 +40,10 @@ namespace BankPractice_v1_
         {
             user1.username = usernameTb.Text;
             user1.password = passTb.Text;
+        }
+
+        private void SaveUser() { 
+            
         }
     }
 }

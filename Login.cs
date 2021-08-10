@@ -13,12 +13,13 @@ namespace BankPractice_v1_
 {
     public partial class Login : Form
     {
+        public List<User> userlist2 = new List<User>();
+
         public Login()
         {
             InitializeComponent();
 
-            User user1 = new User();
-            user1.username = "";
+            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
