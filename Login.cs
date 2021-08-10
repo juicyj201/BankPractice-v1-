@@ -34,7 +34,7 @@ namespace BankPractice_v1_
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (usernameTextBox.Text.Contains()) { }
+            if (usernameTextBox.Text.Contains("@username")) { }
         }
     }
 }
