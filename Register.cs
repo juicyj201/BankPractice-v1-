@@ -9,18 +9,21 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BankPractice_v1_.Model;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace BankPractice_v1_
 {
     public partial class Register : Form
     {
         private SqlConnection conn = null;
+        private string ConnectionString = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename=C:\Users\joshu\source\repos\BankPractice(v1)\Database1.mdf;Integrated Security = True";
         private User user1 = new User();
         private bool success = false;
 
         public Register()
         {
             InitializeComponent();
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -47,17 +50,16 @@ namespace BankPractice_v1_
         }
 
         private void SaveUser() {
-            //conn = new SqlConnection(@"C:\Users\joshu\source\repos\BankPractice(v1)\Database(s)\UserDatabase.mdf");
             string sqlquery = "insert into Users values(@username, @password)";
 
             try
             {
-                using (conn = new SqlConnection(@"C:\Users\joshu\source\repos\BankPractice(v1)\Database(s)\UserDatabase.mdf"))
+                using (conn = new SqlConnection(ConnectionString))
                 using (SqlCommand comm = new SqlCommand(sqlquery, conn))
                 {
                     ConnOpen();
-                    comm.Parameters.AddWithValue("@username", usernameTb);
-                    comm.Parameters.AddWithValue("@password", passTb);
+                    comm.Parameters.AddWithValue("@username", usernameTb.Text);
+                    comm.Parameters.AddWithValue("@password", passTb.Text);
                     int ok = comm.ExecuteNonQuery();
                     if (ok > 0)
                     {
@@ -84,9 +86,12 @@ namespace BankPractice_v1_
             if (success == true)
             {
                 MessageBox.Show("Registration success!");
+                ClearBoxes();
+                this.Close();
             }
             else if (success == false) {
                 MessageBox.Show("Registration failure.");
+                ClearBoxes();
             }
         }
 
@@ -96,6 +101,12 @@ namespace BankPractice_v1_
 
         private void ConnClose() {
             conn.Close();
+        }
+
+        private void ClearBoxes() {
+            usernameTb.Text = "";
+            passTb.Text = "";
+            usernameTb.Focus();
         }
     }
 }

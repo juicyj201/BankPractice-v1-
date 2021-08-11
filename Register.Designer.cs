@@ -35,14 +35,12 @@ namespace BankPractice_v1_
             this.usernameTb = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.confirmTb = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(74, 345);
+            this.button1.Location = new System.Drawing.Point(74, 278);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(394, 50);
             this.button1.TabIndex = 11;
@@ -56,6 +54,7 @@ namespace BankPractice_v1_
             this.passTb.Name = "passTb";
             this.passTb.Size = new System.Drawing.Size(278, 22);
             this.passTb.TabIndex = 10;
+            this.passTb.UseSystemPasswordChar = true;
             this.passTb.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label3
@@ -96,31 +95,11 @@ namespace BankPractice_v1_
             this.label1.TabIndex = 6;
             this.label1.Text = "Register";
             // 
-            // confirmTb
-            // 
-            this.confirmTb.Location = new System.Drawing.Point(190, 270);
-            this.confirmTb.Name = "confirmTb";
-            this.confirmTb.Size = new System.Drawing.Size(278, 22);
-            this.confirmTb.TabIndex = 13;
-            this.confirmTb.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(69, 267);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 25);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Confirm*";
-            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(541, 431);
-            this.Controls.Add(this.confirmTb);
-            this.Controls.Add(this.label4);
+            this.ClientSize = new System.Drawing.Size(541, 359);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.passTb);
             this.Controls.Add(this.label3);
@@ -128,6 +107,7 @@ namespace BankPractice_v1_
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Register";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -142,7 +122,5 @@ namespace BankPractice_v1_
         private System.Windows.Forms.TextBox usernameTb;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox confirmTb;
-        private System.Windows.Forms.Label label4;
     }
 }
