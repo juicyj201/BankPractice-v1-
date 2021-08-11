@@ -63,7 +63,7 @@ namespace BankPractice_v1_
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(278, 22);
             this.usernameTextBox.TabIndex = 2;
-            this.usernameTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            //this.usernameTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // passwordTextBox
             // 
@@ -71,7 +71,7 @@ namespace BankPractice_v1_
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(278, 22);
             this.passwordTextBox.TabIndex = 4;
-            this.passwordTextBox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            //this.passwordTextBox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label3
             // 

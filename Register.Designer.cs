@@ -55,7 +55,7 @@ namespace BankPractice_v1_
             this.passTb.Size = new System.Drawing.Size(278, 22);
             this.passTb.TabIndex = 10;
             this.passTb.UseSystemPasswordChar = true;
-            this.passTb.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            //this.passTb.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label3
             // 
@@ -73,7 +73,7 @@ namespace BankPractice_v1_
             this.usernameTb.Name = "usernameTb";
             this.usernameTb.Size = new System.Drawing.Size(278, 22);
             this.usernameTb.TabIndex = 8;
-            this.usernameTb.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            //this.usernameTb.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 

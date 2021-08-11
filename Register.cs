@@ -26,21 +26,6 @@ namespace BankPractice_v1_
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             user1.username = usernameTb.Text;
@@ -90,7 +75,7 @@ namespace BankPractice_v1_
                 this.Close();
             }
             else if (success == false) {
-                MessageBox.Show("Registration failure.");
+                MessageBox.Show("Registration failure. Please try again");
                 ClearBoxes();
             }
         }
