@@ -35,6 +35,7 @@ namespace BankPractice_v1_
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.returnBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -63,7 +64,6 @@ namespace BankPractice_v1_
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(278, 22);
             this.usernameTextBox.TabIndex = 2;
-            //this.usernameTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // passwordTextBox
             // 
@@ -71,7 +71,7 @@ namespace BankPractice_v1_
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(278, 22);
             this.passwordTextBox.TabIndex = 4;
-            //this.passwordTextBox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.passwordTextBox.UseSystemPasswordChar = true;
             // 
             // label3
             // 
@@ -94,11 +94,23 @@ namespace BankPractice_v1_
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // returnBtn
+            // 
+            this.returnBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.returnBtn.Location = new System.Drawing.Point(396, 12);
+            this.returnBtn.Name = "returnBtn";
+            this.returnBtn.Size = new System.Drawing.Size(143, 50);
+            this.returnBtn.TabIndex = 6;
+            this.returnBtn.Text = "Return";
+            this.returnBtn.UseVisualStyleBackColor = true;
+            this.returnBtn.Click += new System.EventHandler(this.returnBtn_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(551, 390);
+            this.Controls.Add(this.returnBtn);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.label3);
@@ -121,5 +133,6 @@ namespace BankPractice_v1_
         private System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button returnBtn;
     }
 }

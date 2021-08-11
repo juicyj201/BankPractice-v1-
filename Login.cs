@@ -34,7 +34,7 @@ namespace BankPractice_v1_
 
         private void CheckUser()
         {
-            string sqlqueryName = "select * from Users where Username=@username";
+            string sqlqueryName = "select * from Users where Password=@password";
 
             try
             {
@@ -42,7 +42,7 @@ namespace BankPractice_v1_
                 using (SqlCommand comm = new SqlCommand(sqlqueryName, conn))
                 {
                     ConnOpen();
-                    comm.Parameters.AddWithValue("@username", usernameTextBox.Text);
+                    comm.Parameters.AddWithValue("@password", passwordTextBox.Text);
                     //int ok = comm.ExecuteNonQuery();
                     
                     SqlDataReader reader = comm.ExecuteReader();
@@ -73,7 +73,9 @@ namespace BankPractice_v1_
             if (success == true)
             {
                 MessageBox.Show("Login success!");
-                this.Close();
+                this.Hide();
+                Main mainForm = new Main();
+                mainForm.Show();
             }
             else if (success == false)
             {
@@ -95,6 +97,13 @@ namespace BankPractice_v1_
             usernameTextBox.Text = "";
             passwordTextBox.Text = "";
             usernameTextBox.Focus();
+        }
+
+        private void returnBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Main mainForm = new Main();
+            mainForm.Show();
         }
     }
 }

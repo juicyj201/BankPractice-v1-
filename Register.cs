@@ -72,7 +72,9 @@ namespace BankPractice_v1_
             {
                 MessageBox.Show("Registration success!");
                 ClearBoxes();
-                this.Close();
+                this.Hide();
+                Main mainForm = new Main();
+                mainForm.Show();
             }
             else if (success == false) {
                 MessageBox.Show("Registration failure. Please try again");
@@ -92,6 +94,13 @@ namespace BankPractice_v1_
             usernameTb.Text = "";
             passTb.Text = "";
             usernameTb.Focus();
+        }
+
+        private void returnBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Main mainForm = new Main();
+            mainForm.Show();
         }
     }
 }
